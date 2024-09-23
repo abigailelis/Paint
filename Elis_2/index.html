@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+</head>
+
+
+<body onload="main()">
+
+    <div class="parent">
+        <!------- NAV ------->
+        <div class="div1">
+            <div class="dropdown">
+                <button class="dropbtn">Archivo</button>
+                <ul class="dropdown-content">
+                    <li>
+                        <button type="button" id="save" class="btn">Guardar</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="custom-file">
+                <input type="file" name="file" id="file" class="custom-file-input btn btn-light tool">
+                <label class="custom-file-label" for="file">Seleccione imágen</label>
+            </div>
+
+        </div>
+
+        <!------- VISOR ------->
+        <div class="div2">
+            <p id="visor" class="text-center h5">Todo listo.</p>
+        </div>
+
+        <!------- HERRAMIENTAS DE DIBUJO ------->
+
+        <div class="div3">
+            <button type="button" id="pencil" class="btn btn-light tool" title="Lápiz">
+                <i class="bi bi-pencil"></i>
+            </button>
+
+            <button type="button" id="eraser" class="btn btn-light tool" title="Borrador">
+                <i class="bi bi-eraser"></i>
+            </button>
+
+            <button type="button" id="circle" class="btn btn-light tool" title="Círculo">
+                <i class="bi bi-circle"></i>
+            </button>
+
+            <button type="button" id="rectangle" class="btn btn-light tool" title="Rectángulo">
+                <i class="bi bi-square"></i>
+            </button>
+
+            <button class="btn btn-light tool" title="Seleccionar color">
+                <input type="color" name="color" id="color">
+            </button>
+
+            <button class="btn btn-light tool" title="Seleccionar ancho">
+                <select name="width-tool" id="width-tool" class="btn">
+                    <option value="1" selected>1</option>
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </button>
+
+            <button type="button" id="cleanCanvas" title="Borrar todo" class="btn btn-light tool">
+                <i class="bi bi-trash3-fill"></i>
+            </button>
+        </div>
+
+        <!------- FILTROS ------->
+        
+        <div class="div4">
+            <button type="button" id="f-gray" class="btn btn-light" title="Filtro gris">
+                <img src="./images/grayScale-img.jpg" alt="GrayScale">
+            </button>
+
+            <button type="button" id="f-sepia" class="btn btn-light" title="Filtro sepia">
+                <img src="./images/sepia-img.jpg" alt="Sepia">
+            </button>
+
+            <button type="button" id="f-monocromo" class="btn btn-light" title="Filtro monocromático">
+                <img src="./images/monocromo-img.gif" alt="Monocromatic">
+            </button>
+
+            <button type="button" id="f-negative" class="btn btn-light" title="Filtro negativo">
+                <img src="./images/negative-img.jpg" alt="Negative">
+            </button>
+
+            <button type="button" id="f-brillo" class="btn btn-light" title="Brillo">
+                <img src="./images/brillo-img.jpg" alt="Brillo">
+            </button>
+
+            <button type="button" id="f-saturacion" class="btn btn-light" title="Saturación">
+                <img src="./images/saturacion-img.jpg" alt="Saturación">
+            </button>
+
+            <button type="button" id="f-blur" class="btn btn-light" title="Desenfocar imágen">
+                <img src="./images/blur-img.jpg" alt="Blur">
+            </button>
+
+            <button type="button" id="f-det-bordes" class="btn btn-light" title="Detección de bordes">
+                <img src="./images/d-bordes-img.jpg" alt="Detección de bordes">
+            </button>
+        </div>
+
+        <!------- CANVAS ------->
+        <div class="div5">
+            <canvas id="canvas" width="600px" height="300px" style="box-shadow: 1px 1px 5px gray;"></canvas>
+        </div>
+    </div>
+
+    <script src="js/tools/Tool.js"></script>
+    <script src="js/tools/figures/Figure.js"></script>
+    <script src="js/tools/figures/Rectangle.js"></script>
+    <script src="js/tools/figures/Circle.js"></script>
+    <script src="js/tools/Pencil.js"></script>
+    <script src="js/tools/Eraser.js"></script>
+    <script src="js/Pixel.js"></script>
+    <script src="js/filters/Filters.js"></script>
+    <script src="js/filters/FBlur.js"></script>
+    <script src="js/filters/FGray.js"></script>
+    <script src="js/filters/FSepia.js"></script>
+    <script src="js/filters/FNegative.js"></script>
+    <script src="js/filters/FMonochromatic.js"></script>
+    <script src="js/filters/FSaturacion.js"></script>
+    <script src="js/filters/FBordes.js"></script>
+    <script src="js/filters/FBrillo.js"></script>
+    <script src="js/Imagen.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

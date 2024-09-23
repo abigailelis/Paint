@@ -1,0 +1,158 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+}
+
+/*--- nav ----*/
+.div1 {
+    background-color: #464646;
+    grid-column: span 8 / span 8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+    box-shadow: 0 1px 5px gray;
+}
+
+/*--- visor ----*/
+.div2 {
+    grid-column: span 8 / span 8;
+    grid-row-start: 3;
+    padding: .5rem;
+}
+
+/*--- herramientas ----*/
+.div3 {
+    grid-column: span 8 / span 8;
+    grid-row-start: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: fit-content;
+    margin: 0;
+    padding: .5rem;
+    box-shadow: 0 1px 5px gray;
+}
+
+/*--- filtros ----*/
+.div4 {
+    margin-top: 1rem;
+    display:flex;
+    justify-content: space-around;
+    box-shadow: 1px 1px 5px gray;
+    padding: .5rem;
+    position:fixed;
+    bottom:0;
+    left: 0;
+    right: 0;
+}
+
+/*--- canvas ----*/
+.div5 {
+    grid-column: span 8 / span 8;
+    grid-row: span 4 / span 4;
+    grid-row-start: 4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/*-------- HERRAMIENTAS DE DIBUJO -----------*/
+
+select {
+    background-color: transparent;
+}
+
+.tool {
+    height: 50px;
+}
+
+i {
+    font-size: 20px;
+}
+
+button.btn-light {
+    box-shadow: none;
+    background-color: inherit;
+    border: none;
+}
+
+#color {
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+}
+
+/*-------- FILTROS -----------*/
+
+
+div.custom-file {
+    width: 30%;
+}
+
+img {
+    width: 90px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(42, 42, 42);
+}
+
+
+/*--------- DROPDOWN MENU ---------*/
+
+/* Boton del menu desplegable */
+.dropbtn {
+    background-color: transparent;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    color: white;
+}
+
+/* Posicion del menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Menu desplegable - block por defecto */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #464646;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 0;
+}
+
+/* Links dentro del menu desplegable */
+.dropdown-content li {
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li button {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+
+/* Cambia el color de los items del menu al pasar sobre el mismo */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Muestra el menu desplegable al pasar sobre el mismo */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Cambia el color del menu cuando se despliega */
+.dropdown:hover .dropbtn {
+    background-color: #d9d8d886;
+}
